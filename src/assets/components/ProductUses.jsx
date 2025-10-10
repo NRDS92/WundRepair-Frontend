@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import FaceCreams from '../img/facecream.png'
+import FaceCreams from '../img/faceCream.png'
 import handCream from '../img/handCream.png'
 import tattoCream from '../img/tattoCream.png'
 import bottle from '../img/botella1.png'

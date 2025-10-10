@@ -2,9 +2,9 @@ import React from 'react'
 
 import Button from './UI/Button'
 
-import oliven1 from '../img/olve1.png'
-import oliven2 from '../img/olve2.png'
-import bottle from '../img/botella1.png'
+import oliven1 from '../img/olve1.webp'
+import oliven2 from '../img/olve2.webp'
+import bottle from '../img/botella1.webp'
 
 export default function Header({ setOpenCart }) {
   return (
@@ -20,10 +20,10 @@ export default function Header({ setOpenCart }) {
                 <Button onClick={() => setOpenCart(true)}>Jetzt kaufen</Button>
             </div>
             
-            <div className=''>
+            <div className='my-5'>
                 <div className='bg-[#D1E6BE] rounded-t-[100px] h-[150px]  w-[150px]  md:h-[200px] md:w-[200px] relative flex  items-end '>
-                    <img className='w-[55%] h-[130%] object-cover ' src={bottle} alt="wundrepair" />
-                    <img className='w-[35%] h-[100%] object-cover ' src={bottle} alt="wundrepair" />
+                    <img className='w-[55%] h-[130%] object-cover ' src={bottle} alt="wundrepair" loading='lazy' />
+                    <img className='w-[35%] h-[100%] object-cover ' src={bottle} alt="wundrepair" loading='lazy'/>
                 </div>
             </div>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import FaceCreams from '../img/FaceCream.png'
-import handCream from '../img/handCream.png'
-import tattoCream from '../img/tattoCream.png'
-import bottle from '../img/botella1.png'
+import FaceCreams from '../img/FaceCream.webp'
+import handCream from '../img/handCream.webp'
+import tattoCream from '../img/tattoCream.webp'
+import bottle from '../img/botella1.webp'
 
 export default function ProductUses() {
   return (
@@ -25,6 +25,7 @@ export default function ProductUses() {
                 src={bottle}
                 alt="wundrepair"
                 className="w-[50px] absolute -left-8 -rotate-12"
+                loading='lazy'
                 />
                 <motion.img
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -33,6 +34,7 @@ export default function ProductUses() {
                 src={FaceCreams}
                 alt="wundrepair"
                 className="w-full h-full object-contain"
+                loading='lazy'
                 />
                 <motion.img
                 initial={{ opacity: 0, x: 30 }}
@@ -41,6 +43,7 @@ export default function ProductUses() {
                 src={bottle}
                 alt="wundrepair"
                 className="w-[60px] absolute top-0 -right-10 rotate-12"
+                loading='lazy'
                 />
             </div>
 
@@ -86,6 +89,7 @@ export default function ProductUses() {
                 src={bottle}
                 alt="wundrepair"
                 className="w-[50px] absolute -left-8 -rotate-12"
+                loading='lazy'
                 />
                 <motion.img
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -94,6 +98,7 @@ export default function ProductUses() {
                 src={handCream}
                 alt="wundrepair"
                 className="w-full h-full object-contain"
+                loading='lazy'
                 />
                 <motion.img
                 initial={{ opacity: 0, x: 30 }}
@@ -102,6 +107,7 @@ export default function ProductUses() {
                 src={bottle}
                 alt="wundrepair"
                 className="w-[60px] absolute top-0 -right-10 rotate-12"
+                loading='lazy'
                 />
             </motion.div>
 
@@ -156,6 +162,7 @@ export default function ProductUses() {
           className="w-[60px] absolute top-0 -right-10 rotate-12 z-8"
           src={bottle}
           alt="wundrepair"
+          loading='lazy'
         />
 
         {/* Botella izquierda */}
@@ -166,6 +173,7 @@ export default function ProductUses() {
           className="w-[50px] absolute -left-8 -rotate-12 bottom-0 z-8"
           src={bottle}
           alt="wundrepair"
+          loading='lazy'
         />
       </div>
 

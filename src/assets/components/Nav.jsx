@@ -11,7 +11,7 @@ export default function Header() {
         <a className=' text-xl font-bold hover:bg-[#5FB2C4] hover:text-white rounded-2xl p-4' href="/">Contact Us</a> 
     </nav>
     <button className=' text-3xl md:hidden '>
-      <i onClick={() => setIsMenuOpen(!isMenuOpen)} class="fa-solid fa-bars "></i>
+      <i onClick={() => setIsMenuOpen(!isMenuOpen)} className="fa-solid fa-bars "></i>
     </button>
     {isMenuOpen && (
         <div className="absolute top-[50px] left-0 w-full bg-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden">

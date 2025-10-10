@@ -2,10 +2,10 @@ import React from 'react'
 
 import MotionHook from './UI/MotionHook'
 
-import frame1 from '../img/frame1.png'
-import frame2 from '../img/frame2.png'
-import frame3 from '../img/frame3.png'
-import bottle from '../img/botella1.png'
+import frame1 from '../img/frame1.webp'
+import frame2 from '../img/frame2.webp'
+import frame3 from '../img/frame3.webp'
+import bottle from '../img/botella1.webp'
 import Button from './UI/Button'
 
 export default function ProductDescription() {

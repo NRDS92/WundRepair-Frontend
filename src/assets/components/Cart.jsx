@@ -28,7 +28,7 @@ export default function Cart({ setOpenCart, children }) {
   return createPortal(
     <div className=' fixed inset-0   flex items-center justify-center '>
         {cartDisplay === "product" ? 
-            <div className='w-[95%] md:w-[80%] h-[90%] md:h-[80%] backdrop-blur-md mt-15 shadow-xl relative p-8  rounded-[50px] border-4  border-white'>
+            <div className='w-[95%] md:w-[80%] h-[90%] md:h-[80%] backdrop-blur-md mt-15 shadow-xl relative p-8 flex justify-center items-center rounded-[50px] border-4  border-white'>
                 <div className=' absolute top-4 md:top-5 right-4 md:right-5 text-4xl cursor-pointer text-gray-600 hover:text-gray-900 ' onClick={() => setOpenCart(false)}>
                     <i className="fa-solid fa-circle-xmark"></i>
                 </div>
@@ -66,9 +66,6 @@ export default function Cart({ setOpenCart, children }) {
                             onClick={() => setCartDisplay("checkout")}
                             className='w-[250px] my-3 bg-[#5FB2C4] libre text-xl rounded-full py-2 px-1 text-center text-white font-bold'>Go to Checkout</motion.button>
                         </div>
-                        
-                        
-                        
                     </div>
                 </div>
                 

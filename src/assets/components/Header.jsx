@@ -13,7 +13,7 @@ export default function Header({ setOpenCart }) {
         <div className='flex flex-col md:flex-row justify-center items-center space-y-4 gap-10 row-span-2 '>
             <div className='space-y-4 max-w-md flex flex-col justify-center items-center'>
                 <div className='border-l-10 border-[#D1E6BE] pl-4 py-2'>
-                    <h2 className='text-5xl md:text-7xl  pb-5 merriweather'>Wundrepair</h2>
+                    <h2 className='text-5xl md:text-7xl pb-5 merriweather'>Wundrepair</h2>
                     <h3 className='text-xl md:text-2xl merriweather text-center '>Hautregeneration mit der Kraft der Natur</h3>
                 </div> 
                 <p className='text-justify roboto text-xl md:text-2xl' >Activate your skin's natural regeneration processes with carefully formulated ingredients to heal from within.</p>

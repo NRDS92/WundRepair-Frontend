@@ -1,4 +1,4 @@
-import FooterLink from "./UI/FooterLink";
+import FooterLink from "./UI/Footerlink";
 
 
 export default function Footer() {

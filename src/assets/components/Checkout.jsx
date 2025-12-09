@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import axios from "axios";
-import toast from "react-hot-toast";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 // ✅ 1. Checkout Form Component
     function CheckoutForm({ setOpenCart, totalItems, subTotal, totalPrice }) {
-    const deliveryFee = 5;
+    const deliveryFee = 10;
     const stripe = useStripe();
     const elements = useElements();
     const [loading, setLoading] = useState(false);
@@ -51,7 +52,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
         }
 
         try {
-            const deliveryFee = 5;
+            const deliveryFee = 10;
             const unitPrice = 40; 
             const totalAmount = (totalItems * unitPrice + deliveryFee) * 100; 
 
@@ -101,7 +102,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
             setLoading(false);
             return;
             }
-
+            
             // 3️⃣ Save the order in the backend
             console.log("💾 Saving order in the backend...");
             const orderPayload = {
@@ -119,9 +120,13 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
                 orderPayload
             );
 
+
             if (response.data.success) {
                 toast.success("✅ Payment made and order registered correctly");
-                setOpenCart(false);
+                setTimeout(()=>{
+                  setOpenCart(false);
+                },3000)
+
             } else {
                 toast.error("Error registering the order");
                 console.error(response.data);
@@ -137,6 +142,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   return (
     <div className="w-[95%] mt-10 backdrop-blur-md shadow-xl relative p-5 rounded-[50px] border-4 border-white">
+    <ToastContainer />
       {/* ❌ Close button */}
       <div
         className="absolute top-4 right-4 text-4xl cursor-pointer text-gray-600 hover:text-gray-900"
@@ -161,7 +167,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
           Delivery Fee: <span className="font-bold">{deliveryFee} €</span>
         </p>
         <p className="text-lg libre">
-          Total: <span className="font-bold">{(totalPrice + deliveryFee).toFixed(2)} €</span>
+          Total: <span className="font-bold">{(totalPrice ).toFixed(2)} €</span>
         </p>
       </div>
 
@@ -192,7 +198,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
             disabled={!stripe || loading}
             className="w-[250px] bg-[#5FB2C4] text-xl rounded-full py-2 text-white font-bold"
           >
-            {loading ? "Processing..." : `Pay €${(totalPrice + deliveryFee).toFixed(2)}`}
+            {loading ? "Processing..." : `Pay €${(totalPrice ).toFixed(2)}`}
           </button>
         </div>
       </form>

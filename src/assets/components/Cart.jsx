@@ -6,7 +6,7 @@ import Checkout from './Checkout'
 
 
 export default function Cart({ setOpenCart, children }) {
-    const deliveryFee = 5;
+    const deliveryFee = 10;
     const [totalItems, setTotalItems] = useState(1);
     const [cartDisplay, setCartDisplay] = useState("product");
     const itemPrice = 40;
@@ -56,6 +56,7 @@ export default function Cart({ setOpenCart, children }) {
                         
                         <div className=' mt-5 md:mt-15  '>
                             <p className='text-2xl libre'>Quantity: {totalItems}</p>
+                            <p className='text-2xl libre'>Delivery: {deliveryFee} €</p>
                             <p className='text-2xl  libre'>Total:  <span className='font-bold'> {subTotal} €</span></p>
                         </div>
                         <div className=' flex justify-center mt-5 md:mt-10 '>

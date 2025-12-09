@@ -16,7 +16,7 @@ function App() {
       <Nav />
       {openCart && <Cart openCart={openCart} setOpenCart={setOpenCart} />}
       <Header setOpenCart={setOpenCart}/>
-      <ProductDescription />
+      <ProductDescription  setOpenCart={setOpenCart}/>
       <ProductUses />
       
       <Footer />

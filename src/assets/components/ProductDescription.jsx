@@ -8,10 +8,12 @@ import frame3 from '../img/frame3.webp'
 import bottle from '../img/botella1.webp'
 import Button from './UI/Button'
 
-export default function ProductDescription() {
+export default function ProductDescription({setOpenCart}) {
   return (
     <div className='bg-[#FAFAFA] flex flex-col justify-center items-center text-center px-4 py-10 space-y-4 '>
-        <h2 className='libre text-2xl md:text-6xl font-bold  py-4'>Was ist WUNDREPAIR?</h2>
+        <h2 className='libre text-2xl md:text-6xl font-bold  py-4 bg-linear-to-r from-[#D1E6BE] to-[#5FB2C4] text-transparent bg-clip-text'>
+          Was ist WUNDREPAIR?
+        </h2>
         <p className='max-w-4xl text-xl text-justify roboto'>
         <span className='font-bold'>Wundrepair </span> 
         ist dein täglicher Begleiter bei Hautreizungen, Verletzungen und chronischen Hautproblemen wie Neurodermitis, Ekzemen oder Schuppenflechte.
@@ -24,7 +26,7 @@ export default function ProductDescription() {
                 <MotionHook text="Vegane, natürliche Formulierung" src={frame3} />
             </div>
         </div>
-        <Button>Jetzt kaufen</Button>
+        <Button onClick={() => setOpenCart(true)}>Jetzt kaufen</Button>
     </div>
   )
 }

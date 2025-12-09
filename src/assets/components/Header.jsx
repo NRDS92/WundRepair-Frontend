@@ -14,15 +14,15 @@ export default function Header({ setOpenCart }) {
             <div className='space-y-4 max-w-md flex flex-col justify-center items-center'>
                 <div className='border-l-10 border-[#D1E6BE] pl-4 py-2'>
                     <h2 className='text-5xl md:text-7xl pb-5 merriweather'>Wundrepair</h2>
-                    <h3 className='text-xl md:text-2xl merriweather text-center '>Hautregeneration mit der Kraft der Natur</h3>
+                    <h3 className='text-xl md:text-2xl merriweather   '>Hautregeneration mit der Kraft der Natur</h3>
                 </div> 
-                <p className='text-justify roboto text-xl md:text-2xl' >Activate your skin's natural regeneration processes with carefully formulated ingredients to heal from within.</p>
+                <p className=' roboto text-xl md:text-2xl ' >Activate your skin's natural regeneration processes with carefully formulated ingredients to heal from within.</p>
                 <Button onClick={() => setOpenCart(true)}>Jetzt kaufen</Button>
             </div>
             
             <div className='my-5'>
-                <div className='bg-[#D1E6BE] rounded-t-[100px] h-[150px]  w-[150px]  md:h-[200px] md:w-[200px] relative flex  items-end '>
-                    <img className='w-[55%] h-[130%] object-cover ' src={bottle} alt="wundrepair" loading='lazy' />
+                <div className='bg-[#D1E6BE] rounded-t-[100px] h-[150px]  w-[150px]  md:h-[200px] md:w-[200px] relative flex  items-end justify-center '>
+                    <img className='w-[45%] h-[120%] object-cover ' src={bottle} alt="wundrepair" loading='lazy' />
                     <img className='w-[35%] h-[100%] object-cover ' src={bottle} alt="wundrepair" loading='lazy'/>
                 </div>
             </div>

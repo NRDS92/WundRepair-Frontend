@@ -7,14 +7,15 @@ import bottle from '../img/botella1.webp'
 
 export default function ProductUses() {
   return (
-    <div className='bg-white flex flex-col justify-center  text-center py-15 space-y-4 '>
-        <h2 className='libre text-2xl md:text-5xl font-bold  pt-4 '>Warum WUNDREPAIR von JUPHORA?</h2>
+    <div className='bg-white flex flex-col justify-center  text-center py-15 '>
+        <h2 className='libre text-2xl md:text-5xl font-bold bg-linear-to-r from-[#D1E6BE] to-[#5FB2C4] text-transparent bg-clip-text pt-4 '>Warum WUNDREPAIR</h2>
+        <h2 className='libre text-2xl md:text-5xl font-bold bg-linear-to-r from-[#D1E6BE] to-[#5FB2C4] text-transparent bg-clip-text  '>von JUPHORA?</h2>
         <motion.div
             initial={{ x: -200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.4 }}
-            className="bg-[#e8e7e7] flex flex-col md:flex-row justify-center items-center py-7 w-[90%] mt-8 mx-auto"
+            className="bg-[#e8e7e7] rounded-2xl flex flex-col md:flex-row justify-center items-center py-7 w-[90%] mt-8 mx-auto"
             >
             {/* Bloque de imagen */}
             <div className="bg-[#D1E6BE] rounded-t-[100px] h-[170px] w-[200px] flex items-end justify-center relative mb-6 md:mb-0">
@@ -71,7 +72,7 @@ export default function ProductUses() {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.5 }}
-                className="bg-[#e8e7e7] flex flex-col md:flex-row justify-center items-center py-7 w-[90%] mt-8 mx-auto"
+                className="bg-[#e8e7e7] rounded-2xl flex flex-col md:flex-row justify-center items-center py-7 w-[90%] mt-8 mx-auto"
         >
         {/* Imagen */}
             <motion.div
@@ -135,7 +136,7 @@ export default function ProductUses() {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.4 }}
-      className="bg-[#e8e7e7] flex flex-col md:flex-row justify-center py-7 w-[90%] mt-8 mx-auto items-center"
+      className="bg-[#e8e7e7] rounded-2xl flex flex-col md:flex-row justify-center py-7 w-[90%] mt-8 mx-auto items-center"
     >
       {/* Bloque de imagen */}
       <div className="relative flex items-end justify-center w-[200px] h-[170px] mb-6 md:mb-0">

@@ -153,33 +153,33 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
       {/* Title */}
       <div className="flex md:flex-row flex-col items-center justify-evenly">
-        <h2 className="md:text-4xl text-3xl font-bold merriweather">Checkout</h2>
+        <h2 className="md:text-4xl text-2xl font-bold merriweather">Checkout</h2>
       </div>
 
       {/* Order Info */}
-      <div className="mt-3">
-        <h3 className="text-2xl font-bold merriweather">Your Order</h3>
-        <p className="text-lg libre">Product: Wundrepair</p>
-        <p className="text-lg libre">
+      <div className="mt-2">
+        <h3 className="md:text-2xl font-bold merriweather">Your Order</h3>
+        <p className=" text-sm md:text-lg libre">Product: Wundrepair</p>
+        <p className=" text-sm md:text-lg libre">
           Quantity: <span className="font-bold">{totalItems}</span>
         </p>
-        <p className="text-lg libre">
+        <p className="text-sm md:text-lg libre">
           Delivery Fee: <span className="font-bold">{deliveryFee} €</span>
         </p>
-        <p className="text-lg libre">
+        <p className="text-sm md:text-lg libre">
           Total: <span className="font-bold">{(totalPrice ).toFixed(2)} €</span>
         </p>
       </div>
 
       {/* Billing form */}
-      <form onSubmit={handleSubmit} className="flex flex-col gap-2 mt-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-1 md:gap-2 mt-2">
         <h3 className="text-2xl font-bold text-center my-2 merriweather">Billing Details</h3>
 
-        <input onChange={handleChange} value={customer.name} name="name" className="border-2 border-black rounded-lg p-2 text-lg" required type="text" placeholder="Full Name" />
-        <input onChange={handleChange} value={customer.email} name="email" className="border-2 border-black rounded-lg p-2 text-lg" required type="email" placeholder="Email" />
+        <input onChange={handleChange} value={customer.name} name="name" className="border-2 border-black rounded-lg p-2 md:text-lg" required type="text" placeholder="Full Name" />
+        <input onChange={handleChange} value={customer.email} name="email" className="border-2 border-black rounded-lg p-2 md:text-lg" required type="email" placeholder="Email" />
         <input onChange={handleChange} value={customer.address.street} name="street" className="border-2 border-black rounded-lg p-2 text-lg" required type="text" placeholder="Street" />
 
-        <div className="flex md:flex-row flex-col gap-2">
+        <div className="flex md:flex-row flex-col gap-1 md:gap-2">
           <input onChange={handleChange} value={customer.phone} name="phone" className="border-2 border-black rounded-lg p-2 text-lg" required type="text" placeholder="Phone Number" />
           <input onChange={handleChange} value={customer.address.city} name="city" className="border-2 border-black rounded-lg p-2 text-lg" required type="text" placeholder="City" />
           <input onChange={handleChange} value={customer.address.country} name="country" className="border-2 border-black rounded-lg p-2 text-lg" required type="text" placeholder="Country" />
@@ -187,12 +187,12 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
         </div>
 
         {/* Stripe Card Element */}
-        <div className="border p-2 rounded bg-gray-50 mt-2">
+        <div className="border p-2 rounded bg-gray-50 mt-1">
           <CardElement options={{ hidePostalCode: true }} />
         </div>
 
         {/* Submit */}
-        <div className="flex justify-center mt-3">
+        <div className="flex justify-center mt-2">
           <button
             type="submit"
             disabled={!stripe || loading}

@@ -152,6 +152,7 @@ export default function ProductUses() {
             className="w-full h-full object-cover"
             src={tattoCream}
             alt="wundrepair"
+            loading='lazy'
           />
         </motion.div>
 

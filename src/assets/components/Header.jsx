@@ -22,13 +22,15 @@ export default function Header({ setOpenCart }) {
             
             <div className='my-5'>
                 <div className='bg-[#D1E6BE] rounded-t-[100px] h-[150px]  w-[150px]  md:h-[200px] md:w-[200px] relative flex  items-end justify-center '>
-                    <img className='w-[45%] h-[120%] object-cover ' src={bottle} alt="wundrepair" loading='lazy' />
-                    <img className='w-[35%] h-[100%] object-cover ' src={bottle} alt="wundrepair" loading='lazy'/>
+                    <img className='w-[45%] h-[120%] object-cover  ' loading="eager"
+  fetchpriority="high" src={bottle} alt="wundrepair"  />
+                    <img className='w-[35%] h-[100%] object-cover ' loading="eager"
+  fetchpriority="high" src={bottle} alt="wundrepair" />
                 </div>
             </div>
         </div>
         <div className='flex justify-end items-end'>
-            <img className='blur-[3px] w-[70%] ' src={oliven2} alt="oliven" />
+            <img className='blur-[3px] w-[70%] ' src={oliven2} alt="oliven" loading='lazy' />
         </div>
         
 

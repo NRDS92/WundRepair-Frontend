@@ -4,7 +4,7 @@ export default function MotionHook({text, src}) {
   return (
     <div className='flex flex-col gap-2 items-center'>
                 <motion.img 
-                    className='w-[75px] md:w-[150px] ' src={src}
+                    className='w-[75px] md:w-[150px] ' src={src} alt={text} loading="lazy"
                     initial={{rotate: 0,
                                 scale:0
                             }}
